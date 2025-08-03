@@ -42,8 +42,6 @@ on:
         required: true
         type: choice
         options:
-          - ubuntu-latest
-          - macos-latest
           - windows-latest
         default: windows-latest
       branch:
@@ -82,39 +80,6 @@ jobs:
 
       - name: Clone Repository
         run: git clone -b "${{ steps.vars.outputs.branch }}" https://github.com/rzc0d3r/ESET-KeyGen.git
-
-      - name: Setup & Run Script (Linux/macOS)
-        if: runner.os != 'Windows'
-        shell: bash
-        run: |
-          cd ESET-KeyGen
-          if [[ "$RUNNER_OS" == "macOS" ]]; then
-            brew install python@3.11 || true
-          else
-            sudo apt update
-            sudo apt install -y python3-pip python3-venv
-          fi
-
-          python3 -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
-
-          ACCOUNT="${{ steps.vars.outputs.account }}"
-          KEY="${{ steps.vars.outputs.key }}"
-          MAIL="${{ steps.vars.outputs.mail }}"
-          KEY_TYPE="${{ steps.vars.outputs.key_type }}"
-
-          if [[ "$ACCOUNT" != "0" ]]; then
-            python3 main.py --auto-detect-browser --account --email-api "$MAIL" --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat "$ACCOUNT"
-            echo "Account:" >> $GITHUB_STEP_SUMMARY
-            cat ./*ACCOUNTS.txt >> $GITHUB_STEP_SUMMARY 2>/dev/null || echo "None" >> $GITHUB_STEP_SUMMARY
-          fi
-
-          if [[ "$KEY" != "0" ]]; then
-            python3 main.py --auto-detect-browser "$KEY_TYPE" --email-api "$MAIL" --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat "$KEY"
-            echo -e "\nKey:" >> $GITHUB_STEP_SUMMARY
-            cat ./*KEYS.txt >> $GITHUB_STEP_SUMMARY 2>/dev/null || echo "None" >> $GITHUB_STEP_SUMMARY
-          fi
 
       - name: Setup & Run Script (Windows)
         if: runner.os == 'Windows'
