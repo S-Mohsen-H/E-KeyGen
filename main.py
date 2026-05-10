@@ -8,7 +8,7 @@ import io
 I_AM_EXECUTABLE = (True if (getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS')) else False)
 PATH_TO_SELF = sys.executable if I_AM_EXECUTABLE else __file__
 CONFIG_PATH = pathlib.Path(PATH_TO_SELF).parent.resolve().joinpath('eset-keygen-config.json')
-LOG_PATH = pathlib.Path(PATH_TO_SELF).parent.resolve().joinpath('ESET-KeyGen.log')
+LOG_PATH = pathlib.Path(PATH_TO_SELF).parent.resolve().joinpath('E-KeyGen.log')
 SILENT_MODE = '--silent' in sys.argv
 MBCI_MODE = len(sys.argv) == 1
 
@@ -35,14 +35,14 @@ LOGO = f"""
 ███████╗███████║███████╗   ██║      ██║  ██╗███████╗   ██║   ╚██████╔╝███████╗██║ ╚████║   
 ╚══════╝╚══════╝╚══════╝   ╚═╝      ╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝ ╚══════╝╚═╝  ╚═══╝                                                                      
                                                 Project Version: {VERSION[0]}
-                                                Project Devs: rzc0d3r, AdityaGarg8, k0re,
+                                                Project Devs: S-Mohsen-H, AdityaGarg8, k0re,
                                                               Fasjeit, alejanpa17, Ischunddu,
                                                               soladify, AngryBonk, Xoncia,
                                                               Anteneh13, otre4, AHDR3,
                                                               Shariful797
 """
 if '--no-logo' in sys.argv:
-    LOGO = f"ESET KeyGen {VERSION[0]} by rzc0d3r\n"
+    LOGO = f"ESET KeyGen {VERSION[0]} by S-Mohsen-H\n"
 
 DEFAULT_PATH_TO_PROXY_FILE = 'proxies.txt'
 DEFAULT_EMAIL_API = 'emailfake'
@@ -716,7 +716,7 @@ if __name__ == '__main__':
     else:
         enable_logging()
 
-    logging.info(f'ESET-KeyGen Version: text={VERSION[0]}, index={VERSION[1]}')
+    logging.info(f'E-KeyGen Version: text={VERSION[0]}, index={VERSION[1]}')
     logging.info(f'I_AM_EXECUTABLE={I_AM_EXECUTABLE}, OS={os.name}')
     logging.info(f'sys.argv: {sys.argv}')
     

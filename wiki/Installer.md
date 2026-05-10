@@ -11,22 +11,22 @@ When you run the program with the ```--install``` argument, it will install itse
 ---
 
 #### Successful installation
-![Windows](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/img/successfully_installed.png)
+![Windows](https://github.com/S-Mohsen-H/E-KeyGen/blob/main/img/successfully_installed.png)
 
 ---
 
 #### Attempt to reinstall (if the installed executable is not corrupted)
-![Windows](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/img/reinstallation_attempt.png)
+![Windows](https://github.com/S-Mohsen-H/E-KeyGen/blob/main/img/reinstallation_attempt.png)
 
 ---
 
 #### Attempting to install without elevated permissions
-![Windows](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/img/installer_permission_error.png)
+![Windows](https://github.com/S-Mohsen-H/E-KeyGen/blob/main/img/installer_permission_error.png)
 
 ---
 
 #### Attempting to install from source code
-![Windows](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/img/installation_from_source.png)
+![Windows](https://github.com/S-Mohsen-H/E-KeyGen/blob/main/img/installation_from_source.png)
 
 ---
 
@@ -39,4 +39,4 @@ When you run the program with the ```--install``` argument, it will install itse
 
 ---
 
-## This function exists in its current form because of [rzc0d3r](https://github.com/rzc0d3r) and [AdityaGarg8](https://github.com/AdityaGarg8)
+## This function exists in its current form because of [S-Mohsen-H](https://github.com/S-Mohsen-H) and [AdityaGarg8](https://github.com/AdityaGarg8)

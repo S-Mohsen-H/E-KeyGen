@@ -21,7 +21,7 @@ You can also update the program with the ```--update``` argument, the logic is i
 2. In 3 method, critical errors may occur due to the existence of folders with the same name. You can ignore this error, the update program will continue its work. You will just get a folder with a different name (it will not be as nice as the one the update system wanted to make)
 
 ---
-## The new version is a modification of the old one made by [rzc0d3r](https://github.com/rzc0d3r) and [AdityaGarg8](https://github.com/AdityaGarg8)
+## The new version is a modification of the old one made by [S-Mohsen-H](https://github.com/S-Mohsen-H) and [AdityaGarg8](https://github.com/AdityaGarg8)
 </details>
 
 <details>
@@ -32,10 +32,10 @@ You can also update the program with the ```--update``` argument, the logic is i
 You can update the program to the latest version by calling it with the command line argument ```--update```:
 
 ### Update when a binary file is available
-![Windows](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/img/updater_binary_update.png)
+![Windows](https://github.com/S-Mohsen-H/E-KeyGen/blob/main/img/updater_binary_update.png)
 
 ### Update when no binary file is available
-![Windows](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/img/updater_src_update.png)
+![Windows](https://github.com/S-Mohsen-H/E-KeyGen/blob/main/img/updater_src_update.png)
 
 Then the program itself will find the latest version and load it into the project folder.
 
@@ -49,10 +49,10 @@ Then the program itself will find the latest version and load it into the projec
 #### Without this argument, the program will always notify you when an update is available
 
 #### Notification when an update is available
-![Windows](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/img/updater_available.png)
+![Windows](https://github.com/S-Mohsen-H/E-KeyGen/blob/main/img/updater_available.png)
 
 #### Notification when a project is updated to the latest version
-![Windows](https://github.com/rzc0d3r/ESET-KeyGen/blob/main/img/updater_uptodate.png)
+![Windows](https://github.com/S-Mohsen-H/E-KeyGen/blob/main/img/updater_uptodate.png)
 
 ---
 

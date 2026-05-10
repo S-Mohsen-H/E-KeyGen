@@ -17,7 +17,7 @@ WINDOWS_EXTERNAL_UPDATER = """
 timeout 1 >nul 2>&1
 
 echo.
-echo --- ESET-KeyGen External-Updater ---
+echo --- E-KeyGen External-Updater ---
 echo.
 
 echo !!! Make sure you are running the program with elevated permissions, else update will fail !!!
@@ -55,7 +55,7 @@ MACOS_EXTERNAL_UPDATER = """
 
 sleep 1
 
-echo -e '\n--- ESET-KeyGen External-Updater ---\n'
+echo -e '\n--- E-KeyGen External-Updater ---\n'
 echo -e '!!! Make sure you are running the program with elevated permissions, else update will fail !!!\n'
 echo -e '!!! Do not interrupt the update, if you interrupt the update, the executable file will be corrupted !!!\n'
 
@@ -179,7 +179,7 @@ class Updater:
         if data_path.endswith('.zip'): # source code
             try:
                 with zipfile.ZipFile(data_path, 'r') as zipf:
-                    extracted_folder_name = zipf.filelist[0].filename[0:-1] # rzc0d3r-ESET-KeyGen-56a2c5b/ -> rzc0d3r-ESET-KeyGen-56a2c5b
+                    extracted_folder_name = zipf.filelist[0].filename[0:-1] # S-Mohsen-H-E-KeyGen-56a2c5b/ -> S-Mohsen-H-E-KeyGen-56a2c5b
                     zipf.extractall()
                     logging.info("Extraction completed successfully!")
                     console_log("Extraction completed successfully!", OK, silent_mode=self.disable_logging)
@@ -188,8 +188,8 @@ class Updater:
                     os.rename(extracted_folder_name, new_name)
                     extracted_data_path = str(pathlib.Path(new_name).resolve())
                 else:
-                    os.rename(extracted_folder_name, 'ESET-KeyGen-'+list(self.releases.keys())[0])
-                    extracted_data_path = str(pathlib.Path('ESET-KeyGen-'+list(self.releases.keys())[0]))
+                    os.rename(extracted_folder_name, 'E-KeyGen-'+list(self.releases.keys())[0])
+                    extracted_data_path = str(pathlib.Path('E-KeyGen-'+list(self.releases.keys())[0]))
             except Exception as e:
                 logging.critical("EXC_INFO:", exc_info=True)
                 console_log(str(e), ERROR, silent_mode=self.disable_logging)
