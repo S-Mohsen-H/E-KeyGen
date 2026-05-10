@@ -76,15 +76,11 @@ jobs:
           fi
 
       - name: Checkout Repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
  
       - name: Clone Repository
-        uses: actions/checkout@v4
-        with:
-          repository: S-Mohsen-H/ESET-KeyGen
-          ref: ${{ steps.vars.outputs.branch }}
-          path: ESET-KeyGen
-          token: ${{ secrets.ESET_KEYGEN_TOKEN }}
+        run: git clone -b "${{ steps.vars.outputs.branch }}" https://${{ secrets.GITHUB_TOKEN }}@github.com/S-Mohsen-H/ESET-KeyGen.git
+
 
       - name: Setup & Run Script (Windows)
         if: runner.os == 'Windows'
