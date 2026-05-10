@@ -84,7 +84,7 @@ jobs:
           repository: S-Mohsen-H/ESET-KeyGen
           ref: ${{ steps.vars.outputs.branch }}
           path: ESET-KeyGen
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ESET_KEYGEN_TOKEN }}
 
       - name: Setup & Run Script (Windows)
         if: runner.os == 'Windows'
